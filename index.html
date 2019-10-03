@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Intro a JQuery</title>
+</head>
+<body>
+    <h1>O que é JQuery?</h1>
+    <p>JQuery é uma biblioteca JavaScript, de código aberto e livre para usar.</p>
+    <p>JQuery aumenta a produtividade em um projeto!</p>
+    <br>
+    <br>
+    
+    <img src="imagens/001.png" class="icone">
+    <img src="imagens/002.png" class="icone">
+    <img src="imagens/003.png" class="icone">
+
+    <br>
+    <br>
+    <button id="btnTrocaCor">Clique aqui!</button>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".icone").css("opacity", 0.3);
+
+            $("#btnTrocaCor").on("click", function(){
+                $(this).css("background-color","red");
+                alert("Estou aprendendo JQuery!");
+            });
+
+            $(".icone").on("mouseover", function(){
+                $(".icone").css("opacity", 0.3);
+                $(this).css("opacity", 1);
+            });
+        });
+    </script>
+</body>
+</html>
